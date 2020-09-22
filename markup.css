@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background-color: #f3a683;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.main__field {
+    display: flex;
+    flex-basis: 100vw;
+    height: 100vh;
+    background-color: #f3a683;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    z-index: 1;
+
+}
+
+.main__field-boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -20%;
+    z-index: 1;
+}
+.main__field-boxes::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    padding: 2px 2px 2px 3px;
+    border-radius: 20px;
+    background: linear-gradient(269deg, #35bd9a, #6bcf35, #ea8b48);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 5s ease infinite;
+    -moz-animation: AnimationName 5s ease infinite;
+    -o-animation: AnimationName 5s ease infinite;
+    animation: AnimationName 5s ease infinite;
+}
+
+.input__box {
+    display: grid;
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    flex-direction: column;
+    transition: .2s;
+    align-items: center;
+}
+
+
+
+.input__box:focus-within {
+    box-shadow: 0 4px 8px 0;
+    transform: translateY(-2px);
+}
+
+.input__box-field {
+    border-radius: inherit;
+    margin: 5px 10px 5px 10px;
+    padding: 0 30px 0 0;
+    outline: none;
+    font-size: large;
+
+}
+
+.arrow, .arrow-block {
+    height: 42px;
+    width: 42px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.arrow {
+    display: flex;
+    right: -5px;
+    z-index: 1;
+}
+
+.arrow-block {
+    right: -5px;
+    transition: .5s;
+    z-index: 0;
+}
+
+.arrow:hover {
+    box-shadow: 0 3px 10px 0;
+}
+
+.result__box {
+    display: grid;
+    background: white;
+    min-width: 15%;
+    max-width: 35%;
+    position: absolute;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: .5s;
+    padding: 10px;
+    justify-content: center;
+    max-height: 30%;
+    overflow-y: scroll;
+}
+
+
+.result__box ul {
+    height: inherit;
+}
+
+.result__box li{
+    list-style: none;
+}
+
+
+
+.arrow img {
+    height: inherit;
+    width: inherit;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
